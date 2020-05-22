@@ -17,11 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button login;
         final EditText text;
-        final TextView hello=null;
-        hello.setVisibility(View.GONE);
-        //hello = findViewById(R.id.hello);
+        final TextView hello;
+        hello = findViewById(R.id.hello);
+        hello.setVisibility(View.INVISIBLE);
+
         login = findViewById(R.id.login);
         text=findViewById(R.id.text);
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
