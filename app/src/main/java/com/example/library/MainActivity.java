@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button login;
         final EditText text;
+        final TextView hello=null;
+        hello.setVisibility(View.GONE);
+        //hello = findViewById(R.id.hello);
         login = findViewById(R.id.login);
         text=findViewById(R.id.text);
         login.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 login.setEnabled(false);
                 login.setVisibility(View.INVISIBLE);
                 text.setVisibility(View.INVISIBLE);
+                hello.setVisibility(View.VISIBLE);
             }
         });
     }
