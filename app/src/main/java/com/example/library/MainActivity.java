@@ -2,6 +2,7 @@ package com.example.library;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,9 +25,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                ImageView image = (ImageView) findViewById(R.id.pic);
-                image.setImageResource(R.drawable.staryellow);
-                Toast.makeText(MainActivity.this, "image changed", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, ImageActivity.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "activity changed", Toast.LENGTH_SHORT).show();
                 login.setEnabled(false);
             }
         });
